@@ -8,7 +8,8 @@ const { argv } = require('yargs');
 
 const DEFAULT_MNEMONIC = 'test test test test test test test test test test test junk';
 process.env.HARDHAT_NETWORK = 'hardhat';
-process.env.MNEMONIC = argv.test ? DEFAULT_MNEMONIC : process.env.MNEMONIC;
+//process.env.MNEMONIC = argv.test ? DEFAULT_MNEMONIC : process.env.MNEMONIC;
+process.env.MNEMONIC = DEFAULT_MNEMONIC
 const { ethers, upgrades } = require('hardhat');
 const {
     MemDB, ZkEVMDB, getPoseidon, smtUtils,
